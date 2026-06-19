@@ -1,0 +1,11 @@
+site_name: Sistema de Auditoria Jurídica S.A.C.
+theme:
+  name: material
+  palette:
+    primary: indigo
+    accent: indigo
+
+nav:
+  - Início: index.md
+  - Arquitetura do Sistema: arquitetura.md
+  - Referência Técnica: referencia.md

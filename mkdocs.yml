@@ -5,7 +5,20 @@ theme:
     primary: indigo
     accent: indigo
 
+plugins:
+  - search
+  - i18n:
+      docs_structure: folder
+      languages:
+        - locale: pt
+          default: true
+          name: Português
+          build: true
+        - locale: en
+          name: English
+          build: true
+
 nav:
-  - Início: index.md
-  - Arquitetura do Sistema: arquitetura.md
-  - Referência Técnica: referencia.md
+  - Início / Home: index.md
+  - Arquitetura / Architecture: arquitetura.md
+  - Referência / Reference: referencia.md

@@ -6,10 +6,20 @@ import google.generativeai as genai
 import io
 import json
 
+
 app = FastAPI()
+from fastapi.middleware.cors import CORSMiddleware
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # 1. Configuração da Inteligência Artificial
-CHAVE_API = "CHAVE" # Lembre-se de colocar sua chave do AI Studio
+CHAVE_API = "CHAVE"
 genai.configure(api_key=CHAVE_API)
 
 model = genai.GenerativeModel('gemini-2.5-flash')
@@ -78,3 +88,4 @@ async def analisar_contrato(file: UploadFile = File(...)):
 
     except Exception as e:
         return {"erro": f"Erro interno no processamento: {str(e)}"}
+

@@ -1,6 +1,6 @@
 import google.generativeai as genai
 
-CHAVE_API = "CHAVE" 
+CHAVE_API = "Chave" 
 genai.configure(api_key=CHAVE_API)
 
 print("--- BUSCANDO MODELOS DISPONÍVEIS ---")
